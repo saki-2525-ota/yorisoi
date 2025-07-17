@@ -1,0 +1,235 @@
+:root {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+* {
+  /* パディングとボーダーを含んだwidth／heightに */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige; /* 背景色を付けたい場合のみ */
+  margin: 0;
+  padding: 0;
+  /* ページ全体の幅は div#container に設定する */
+}
+
+div#container {
+  max-width: 800px; /* 全幅にしたければ「100vw」と指定 */
+  margin: 0 auto; /* 全体を中央揃え */
+  background-color: white; /* 背景色を付けたい場合のみ */
+}
+
+/* ヘッダー */
+header {
+  height: 300px; /* 高さ */
+  /* 幅（width）は既定値１００％なので基本はそのままでOK */
+
+  /* 背景画像の設定 */
+  background-image: url('fig/header-img.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* contain（切り替えて確認する） */
+  background-position: center; /* coverの場合、どこを切り取るか */
+
+  /* nav要素をヘッダーの中（下端）に置きたい場合のみ */
+  position: relative;
+}
+
+/* ヘッダーのタイトル */
+header h1 {
+  margin-top: 0; /* これがないと上に余白ができる */
+
+  /* 装飾 */
+  font-size: 3em;
+  text-align: center;
+}
+
+/* ヘッダー内の文章（別にdivでもいい） */
+header p {
+  /* 装飾 */
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* ページ内リンク（共通項） */
+nav {
+  display: flex; /* 横並びにする */
+  flex-wrap: wrap; /* 幅が狭いときに改行する */
+  justify-content: space-around; /* 他の並べ方は検索する */
+
+  /* justify-contentでleft／rightにした場合は間隔をgapで指定 */
+  /* gap: 1em; */
+
+  /* nav領域の上下の余白はpaddingで */
+  padding: 0.5em 0;
+}
+
+/* 個々のリンクのスタイルはa要素に対して行う */
+nav a {
+  width: 20%; /* gapを設定していると */
+  display: block; /* こうしておくとクリックしやすい */
+
+  text-decoration: none; /* 下線が必要なければ */
+  text-align: center; /* デザインによっては無くてもよい */
+}
+
+/* ページ内リンク（ヘッダーの上に置く場合） */
+nav#nav_top {
+  /* ヘッダー内の下に配置しないときな特に何もしなくてよい */
+
+  /* 装飾 */
+  background-color: saddlebrown;
+}
+
+nav#nav_top a {
+  /* 装飾 */
+  color: white;
+}
+
+/* ページ内リンク（ヘッダーの下に置く場合） */
+nav#nav_inHeader {
+  position: absolute; /* header要素を基準にする */
+  bottom: 0; /* header要素の下端から距離０ */
+  width: 100%; /* positionとflexboxを同時に使うときは必須 */
+
+  /* 装飾 */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav#nav_inHeader a {
+  /* 装飾 */
+  color: white;
+}
+
+/* 画像まわりの共通設定 */
+figure {
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+}
+
+/* セクション */
+section {
+  /* 装飾 */
+  margin-top: 1.5em;
+  padding: 1em;
+}
+
+/* セクションで交互に背景色を変えたい場合（even／odd） */
+section:nth-of-type(even) {
+  background-color: snow;
+}
+
+/* セクションの見出し */
+section h1 {
+  /* 装飾 */
+  background-color: wheat;
+  padding: 0.5em 1em;
+  border-radius: 1.25em; /* 角丸 */
+}
+
+/* セクションの小見出し */
+section h2 {
+  /* 装飾 */
+  font-size: 1.2em;
+  text-align: left;
+  border-left: solid 1.2em saddlebrown;
+  padding-left: 0.5em;
+}
+
+/* ２つ目以降の小見出しのみへの装飾とか */
+section h2:not(:first-child) {
+  /* 装飾 */
+  margin-top: 2em;
+}
+
+/*** タイプ1： 要素を上から順に並べていく ***/
+
+section.type1 .sec-container {
+  /* レイアウトに関しては何もしなくてよい */
+
+  /* 装飾（例えば中央揃えする場合とか） */
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+section.type1 figure {
+  width: 70%; /* 画像サイズを調整したい場合 */
+  margin: 0 auto;
+}
+
+/*** タイプ2： 要素を横並びにする ***/
+
+section.type2 .sec-container {
+  /* 装飾 */
+  width: 90%;
+  margin: 0 auto;
+}
+
+section.type2 .flex-container {
+  display: flex;
+  justify-content: left;
+  flex-wrap: nowrap; /* 幅が足りないときに折り返したいとき */
+  gap: 0px; /* 要素間の幅 */
+}
+
+section.type2 figure {
+  flex: 1 1 300px; /* 画像サイズ（300pxの部分を適当に調整） */
+}
+
+section.type2 p {
+  width: 100%; /* 必要 */
+}
+
+/*** タイプ3： 画像とテキストの上下セットを横並びしたい場合 ***/
+
+section.type3 .flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* 幅が足りないときに折り返したいとき */
+  gap: 20px; /* 要素間の幅 */
+}
+
+section.type3 .content {
+  max-width: 300px; /* 横並びにしたい要素の幅を指定 */
+}
+
+/*** タイプ4： 画像とテキストの横並びセットを更に横並びしたい場合 ***/
+
+section.type4 .sec-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* 幅が足りないときに折り返したいとき */
+  gap: 20px; /* 要素間の幅 */
+}
+
+section.type4 .flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* 要素間の幅 */
+  width: 40%; /* 横並び要素の幅 */
+}
+
+section.type4 figure {
+  flex: 1 1 100px; /* 画像サイズ（100pxの部分を適当に調整） */
+}
+
+section.type4 p {
+  width: 100%; /* 必要 */
+}
+
+/*** type5： ネタ切れ ***/
+section.type5 .sec-container {
+  padding: 0 50px;
+}
+
+/* フッター */
+footer {
+  margin-top: 1.5em;
+  padding: 1em 1em 3em; /* heightで調整してもよい*/
+  background-color: lightgrey;
+}
