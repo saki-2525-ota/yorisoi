@@ -23,11 +23,11 @@ div#container {
 
 /* ヘッダー */
 header {
-  height: 300px; /* 高さ */
+ /* height: 300px; */
   /* 幅（width）は既定値１００％なので基本はそのままでOK */
 
   /* 背景画像の設定 */
-  background-image: url('寄り添いファシリテーター.png');
+  /*background-image: url('寄り添いファシリテーター.png');*/
   background-repeat: no-repeat;
   background-size: cover; /* contain（切り替えて確認する） */
   background-position: center; /* coverの場合、どこを切り取るか */
@@ -36,14 +36,39 @@ header {
   position: relative;
 }
 
-/* ヘッダーのタイトル */
+/*追加　8/6*/
+.sec-container_1 {
+  /* レイアウトに関しては何もしなくてよい */
+
+  /* 装飾（例えば中央揃えする場合とか） */
+  width: 80%;
+  text-align: center;
+  margin:0 auto;
+}
+
+.sec-container_1 figure {
+  width: 30%; /* 画像サイズを調整したい場合 */
+  margin: 0 auto;
+}
+
+.sec-container_1 p{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+header h2{
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
 header h1 {
-  margin-top: 0; /* これがないと上に余白ができる */
+  margin: 30px 0; /* これがないと上に余白ができる */
 
   /* 装飾 */
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
 }
+/*ここまで追加　8/6*/
 
 /* ヘッダー内の文章（別にdivでもいい） */
 header p {
