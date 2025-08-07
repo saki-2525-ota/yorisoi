@@ -115,10 +115,7 @@ section {
   padding: 1em;
 }
 
-/* セクションで交互に背景色を変えたい場合（even／odd） */
-section:nth-of-type(even) {
-  background-color: snow;
-}
+
 
 /* セクションの見出し */
 section h1 {
@@ -184,8 +181,9 @@ section.type1 figure {
 
 section.type2 .sec-container {
   /* 装飾 */
-  width: 90%;
-  margin: 0 auto;
+width: 90%;
+  margin: 3em auto;
+  
 }
 
 section.type2 .flex-container {
@@ -193,6 +191,9 @@ section.type2 .flex-container {
   justify-content: left;
   flex-wrap: nowrap; /* 幅が足りないときに折り返したいとき */
   gap: 0px; /* 要素間の幅 */
+  background-color: #fff0f5;
+  border-radius: 1em;
+  padding: 2em;
 }
 
 section.type2 figure {
