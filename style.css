@@ -26,7 +26,7 @@ header {
   /* 幅（width）は既定値１００％なので基本はそのままでOK */
 
   /* 背景画像の設定 */
-  background-image: url('fig/ヘッダー.jpg');
+  background-image: url('fig/ヘッダー.png');
   background-repeat: no-repeat;
   background-size: cover; /* contain（切り替えて確認する） */
   background-position: center; /* coverの場合、どこを切り取るか */
@@ -38,16 +38,15 @@ header {
 /* ヘッダーのタイトル */
 header h1 {
   margin-top: 0; /* これがないと上に余白ができる */
-
   /* 装飾 */
   font-size: 3em;
   text-align: center;
-padding-top: 30px;
-  color: orange;
+  padding-top: 30px;
+  color: white;
 }
 
 .kaisei {
- font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'Kosugi Maru', sans-serif;
   font-weight: 650;
 }
 
@@ -56,7 +55,7 @@ header p {
   /* 装飾 */
   width: 80%;
   margin: 0 auto;
-   text-align: center;
+  text-align: center;
 }
 
 /* ページ内リンク（共通項） */
@@ -114,8 +113,6 @@ section {
   margin-top: 1.5em;
   padding: 1em;
 }
-
-
 
 /* セクションの見出し */
 section h1 {
@@ -177,9 +174,11 @@ section.type1 figure {
   margin: 0 auto;
 }
 
+/*** タイプ2： 要素を横並びにする ***/
+
 section.type2 .AI-container {
   /* 装飾 */
-align-items: center;
+  align-items: center;
   display: flex;
   justify-content: left;
   flex-wrap: nowrap;
@@ -189,13 +188,10 @@ align-items: center;
   margin-right: 20px;
 }
 
-/*** タイプ2： 要素を横並びにする ***/
-
 section.type2 .sec-container {
   /* 装飾 */
-width: 90%;
+  width: 90%;
   margin: 3em auto;
-  
 }
 
 section.type2 .flex-container {
@@ -212,14 +208,13 @@ section.type2 .flex-container {
 
 section.type2 figure {
   flex: 1 1 800px; /* 画像サイズ（300pxの部分を適当に調整） */
-   margin-right: 20px;
+  margin-right: 20px;
 }
 
 section.type2 p {
   width: 100%; /* 必要 */
+  margin-top: 1em;
 }
-
-
 
 /* フッター */
 footer {
@@ -232,6 +227,54 @@ footer {
 
 .indent {
   text-align: left;
-  padding-left: 0;
-  text-indent: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.se-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+  margin-top: 2em;
+  flex-wrap: wrap; /* 画面が狭いとき折り返す */
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text-block {
+  flex: 1 1 55%;
+  min-width: 250px;
+}
+
+.矢印 {
+  width: 200px;
+
+  transform: translateX(-70px);
+}
+
+.矢印 img {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+.fl-container {
+  flex: 0 0 auto;
+}
+
+.fl-container h3 {
+  margin: 0;
+  background: linear-gradient(transparent 40%, #ffff89 50%);
+  display: inline-block;
+  font-size: 1.2em;
+  margin-top: 50px;
+}
+
+.arrow-h3 {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
 }
