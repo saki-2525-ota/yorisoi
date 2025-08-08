@@ -26,7 +26,7 @@ header {
   /* 幅（width）は既定値１００％なので基本はそのままでOK */
 
   /* 背景画像の設定 */
-  background-image: url('fig/ヘッダー.png');
+  background-image: url('fig/ヘッダー1.png');
   background-repeat: no-repeat;
   background-size: cover; /* contain（切り替えて確認する） */
   background-position: center; /* coverの場合、どこを切り取るか */
