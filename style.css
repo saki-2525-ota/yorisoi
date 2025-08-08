@@ -219,47 +219,7 @@ section.type2 p {
   width: 100%; /* 必要 */
 }
 
-/*** タイプ3： 画像とテキストの上下セットを横並びしたい場合 ***/
 
-section.type3 .flex-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; /* 幅が足りないときに折り返したいとき */
-  gap: 20px; /* 要素間の幅 */
-}
-
-section.type3 .content {
-  max-width: 300px; /* 横並びにしたい要素の幅を指定 */
-}
-
-/*** タイプ4： 画像とテキストの横並びセットを更に横並びしたい場合 ***/
-
-section.type4 .sec-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; /* 幅が足りないときに折り返したいとき */
-  gap: 20px; /* 要素間の幅 */
-}
-
-section.type4 .flex-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px; /* 要素間の幅 */
-  width: 40%; /* 横並び要素の幅 */
-}
-
-section.type4 figure {
-  flex: 1 1 100px; /* 画像サイズ（100pxの部分を適当に調整） */
-}
-
-section.type4 p {
-  width: 100%; /* 必要 */
-}
-
-/*** type5： ネタ切れ ***/
-section.type5 .sec-container {
-  padding: 0 50px;
-}
 
 /* フッター */
 footer {
