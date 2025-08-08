@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>寄り添いファシリテーター</title>
     <link rel="stylesheet" href="style.css" />
-    <!--追加8/7--!>
-   <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-    <!--ここまで追加8/7--!>
   </head>
   <body>
     <div id="container">
       <nav id="nav_top">
-     <!--追加8/7--!>
         <a href="#sec1">TOP</a>
         <a href="#sec2">ASSIGNMENT</a>
         <a href="#sec3">ABOUT</a>
@@ -22,33 +20,37 @@
       </nav>
       <header>
         <h1 class="kaisei">寄り添いファシリテーター</h1>
-        <p>~遠隔コミュニケーションに、やさしさを~</p>
-        <p>AIがつなぐ、新しい会話のかたち</p>
-          </header>
-
-    
-   
-     <main>
+        <p>~遠隔コミュニケーションに、やさしさを~</br>
+        AIがつなぐ、新しい会話のかたち</p>
+      </header>
+      <main>
         <!-- 見出し1 -->
         <section id="sec2" class="type1">
           <h1>遠隔コミュニケーションにおける課題</h1>
-          <div class="sec-container">
+          <div class="se-container">
+            <div class="text-block">
             <h2>非言語情報の伝達が難しい</h2>
-            <p class="indent">
+           <p class="indent">
   <span>対面では自然に伝わる表情・視線・ジェスチャーが見えづらい。</span><br>
   <span>カメラの画角や解像度の制限で、絶妙な顔色や動きが伝わらない。</span><br>
   <span>視線が合わないため、相手がどこを見ているのかわかりにくい。</span>
 </p>
+
             <h2>通信ラグによる会話の難しさ</h2>
             <p class="indent">
             <span>音声や映像に遅延が発生する。</span></br>
             <span>発話のタイミングが被りやすく、誰が話すか迷う瞬間がある。</span></br>
             <span>音声が途切れたり、表情と声がズレて見えることがある。</span></br>
             </p>
-            <figure>
+            </div>
+            <div class="arrow-h3">
+            <figure class="矢印">
               <img src="fig/矢印.jpeg" />
             </figure>
+            <div class="fl-container">
             <h3>コミュニケーションがとりづらい！！</h2>
+            </div>
+            </div>
           </div>
         </section>
 
@@ -57,7 +59,7 @@
           <h1>"寄り添いファシリテーター"の提案</h1>
           <div class="sec-container">
             <h2>AIが自動で司会進行</h2>
-            <div class="flex-container">
+            <div class="AI-container">
               <figure>
                 <img src="fig/アイコン.png" />
               </figure>
@@ -70,45 +72,58 @@
         <section id="sec4" class="type2">
           <h1>3つの主要機能</h1>
           <div class="sec-container">
-            
+            <h2>1. 沈黙時のAI指名</h2>
             <div class="flex-container">
-              <h2>1. 沈黙時のAI指名</h2>
+              
               <figure>
                 <img src="fig/AI指名/１.png" />
                 <img src="fig/AI指名/２.png" />
               </figure>
-              <p>沈黙が続くとAIが自動的に発話者を指名し、参加者の</br>"発言権"を調整します。</br>気まずい沈黙を解消し、
-                発言しやすい雰囲気を創出します。</p>
+              <p>
+                沈黙が一定時間続くと、AIが会話の流れを分析し、まだ発言していない人や最近発言していない人を自動的に指名し、参加者の"発言権"を調整します。</br>
+                これにより、参加者全員が均等に発言の機会を持てるようになり、特定の人だけが話し続ける状況を防ぎます。</br>
+                また、話題が途切れた場面でも自然に次の発言者へとバトンが渡るため、気まずい沈黙が解消され、誰もが発言しやすい雰囲気を保つことができます。    
+              </p>
             </div>
 
-              
+<h2>2. 発言競合の調整</h2>              
               <div class="flex-container">
-                <h2>2. 発言競合の調整</h2>
+                
               <figure>
                 <img src="fig/会話被り/３.png" />
                 <img src="fig/会話被り/４.png" />
                 <img src="fig/会話被り/５.png" />
               </figure>
-              <p>最初に話した人を自動検知して優先順位を決定します。</br>優先話者の画面回りを色付けして視覚化することで、会話が被っても議論を止めず続けることができます。</p>
+              <p>
+              会議やディスカッションでは、複数人が同時に話し始めてしまう場面があります。</br>
+            このシステムは、最初に話し始めた人をAIが自動で検知し、その人を「優先話者」として認定します。</br>
+              優先話者の画面枠を色で可視化することで、だれが発言権を持っているのかを参加者全員がすぐに把握できます。</br>
+              これにより、会話が被っても途中で中断せず、スムーズに議論を進めることが可能になります。
+                
+               
             </div>
-           
+            <h2>3. 思考時間の確保</h2>
             <div class="flex-container">
-               <h2>3. 思考時間の確保</h2>
+              
               <figure>
                 <img src="fig/思考時間/６.png" />
                 <img src="fig/思考時間/７.png" />
                 <img src="fig/思考時間/８.png" />
               </figure>
-              <p>思考時間が必要なときに、全員のマイクをオフにします。</br>意図的な沈黙を作ることで「考える間」を創出し、</br>質の高い議論と深い思考を</br>サポートします。</p>
+              <p>
+              複雑な議題や重要な意思決定では、すぐに答えるよりも深く考える時間が必須です。</br>
+              この機能では、司会者やAIが判断して全員のマイクを一時的に自動オフにします。</br>
+              意図的に「沈黙の時間」を設けることで、周囲の発言に邪魔されず自分の考えを整理できます。</br>
+              これにより、浅い意見ではなく、より深い思考や質の高い発言が導き出せます。
+              </p>
             </div>
           </div>
         </section>
 
-        
+       
       </main>
       <footer>共同ゼミ前期2班　寄り添いファシリテーター</footer>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
-<!--ここまで追加8/7--!>
